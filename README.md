@@ -7,7 +7,17 @@ This is a repository to keep track of the projects done while following the [Pau
 - [Project 1: WeSplit](WeSplit)
 
 <div style="text-align: center;">
-  <img src="./videos/weSplitDemo.gif" width="300px"/>
+  <img src="./assets/weSplitDemo.gif" width="300px"/>
+</div>
+
+<br/>
+<br/>
+
+
+- [Challenge 1: Unit Conversion App](ChallengeDay19)
+
+<div style="text-align: center;">
+  <img src="./assets/lengthConvDemo.gif" width="300px"/>
 </div>
 
 <br/>
