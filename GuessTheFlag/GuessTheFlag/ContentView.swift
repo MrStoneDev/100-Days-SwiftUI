@@ -11,8 +11,9 @@ struct ContentView: View {
     @State private var showingScore = false
     @State private var scoreTitle = ""
     @State private var score = 0
-    @State private var buttonTitle = ""
     @State private var textAlert = ""
+    @State private var games = 1
+    @State private var gameOver = false
     
     @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"].shuffled()
     
@@ -57,6 +58,12 @@ struct ContentView: View {
                 Spacer()
                 Spacer()
                 
+                Text("Game \(games)")
+                    .foregroundColor(.white)
+                    .font(.title3.bold())
+                
+                Spacer()
+                
                 Text("Score: \(score)")
                     .foregroundColor(.white)
                     .font(.title.bold())
@@ -66,31 +73,50 @@ struct ContentView: View {
             .padding()
         }
         .alert(scoreTitle, isPresented: $showingScore) {
-            Button(buttonTitle, action: askQuestion)
+            Button("Continue", action: askQuestion)
         } message: {
             Text(textAlert)
+        }
+        
+        .alert("Game Over!", isPresented: $gameOver) {
+            Button("Start again", action: reset)
+        } message: {
+            Text("Your score is \(score)")
         }
     }
     
     func flagTapped(_ number: Int) {
         if number == correctAnswer {
-            scoreTitle = "Correct"
-            buttonTitle = "Continue"
+            scoreTitle = "Correct!"
             textAlert = "+1 Point!"
             score += 1
         } else {
-            scoreTitle = "Game Over"
-            buttonTitle = "Start again"
-            textAlert = "Your score is: \(score)"
-            score = 0
+            scoreTitle = "Wrong!"
+            textAlert = "That's the flag of \(countries[number])"
         }
         
         showingScore = true
     }
     
     func askQuestion() {
+        games += 1
+        
+        if games == 9 {
+            games = 8
+            gameOver = true
+        }
+        
+        if gameOver == false {
+            countries.shuffle()
+            correctAnswer = Int.random(in: 0...2)
+        }
+    }
+    
+    func reset() {
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
+        score = 0
+        games = 1
     }
 }
 
