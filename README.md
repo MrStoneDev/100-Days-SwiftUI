@@ -22,3 +22,13 @@ This is a repository to keep track of the projects done while following the [Pau
 
 <br/>
 <br/>
+
+
+- [Project 2: GuessTheFlag](GuessTheFlag)
+
+<div style="text-align: center;">
+  <img src="./assets/guessTheFlagDemo.gif" width="300px"/>
+</div>
+
+<br/>
+<br/>
