@@ -32,3 +32,13 @@ This is a repository to keep track of the projects done while following the [Pau
 
 <br/>
 <br/>
+
+
+- [Milestone Project 1: RockPaperScissors](RockPaperScissors)
+
+<div style="text-align: center;">
+  <img src="./assets/rockPaperScissorsDemo.gif" width="300px"/>
+</div>
+
+<br/>
+<br/>
