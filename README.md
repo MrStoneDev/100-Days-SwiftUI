@@ -42,3 +42,13 @@ This is a repository to keep track of the projects done while following the [Pau
 
 <br/>
 <br/>
+
+
+- [Project 4: BetterRest](BetterRest)
+
+<div style="text-align: center;">
+  <img src="./assets/betterRestDemo.gif" width="300px"/>
+</div>
+
+<br/>
+<br/>
